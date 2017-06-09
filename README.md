@@ -34,6 +34,11 @@ test "web worker restarts if mysql is down" do
 end
 ```
 
+## Prereqs
+
+- `iptables`
+- `ping`
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed

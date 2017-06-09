@@ -2,7 +2,7 @@ defmodule MonkeyScriptTestInfra do
   use MonkeyScript.Scripting.Infra
 
   name "web worker"
-  hosts domain: "api.shopify.com"
+  hosts domain: "api.hackthenorth.com"
   service "mysql", port: 8000
   service "nginx", port: 80
 
