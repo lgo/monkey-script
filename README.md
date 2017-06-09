@@ -18,7 +18,16 @@ defmodule Infra do
   monkeyscript_finish()
 end
 
+# Include test and monkeyscript networking libraries
+use ExUnit.Case
+import MonkeyScript.Scripts.Networking
 
+# Our custom code to restart the systems
+def restart_worker(...) do
+  ...
+end
+
+# Our monkey script resiliency tests, in the form of standard unit tests
 test "can still hit homepage if mysql is down" do
   block_port(Infra, "app-server", service: "mysql") do
     assert true == ping(Infra, "app-server")
